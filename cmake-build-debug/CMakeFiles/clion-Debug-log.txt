@@ -1,0 +1,6 @@
+/snap/clion/248/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/248/bin/ninja/linux/x64/ninja -G Ninja -S /home/adelelakour/CLionProjects/Simox_projects/own__GraspPlanner -B /home/adelelakour/CLionProjects/Simox_projects/own__GraspPlanner/cmake-build-debug
+-- Using Simox Binary Package from: /usr/local/share/Simox/cmake
+--  * Including /usr/local/share/Simox/cmake/SimoxMacros.cmake
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/adelelakour/CLionProjects/Simox_projects/own__GraspPlanner/cmake-build-debug

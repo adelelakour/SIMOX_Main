@@ -5,13 +5,27 @@
 #ifndef GRASPER_MYGRASPPLANNERWINDOWS_H
 #define GRASPER_MYGRASPPLANNERWINDOWS_H
 #include "GraspPlannerWindow.h"
+#include <Eigen/Dense>
+#include <array>
 
-class myGraspPlannerWindows : public GraspPlannerWindow{
+using Vector3f = Eigen::Vector3f; // Define an alias for convenience
+
+
+class myGraspPlannerWindow : public GraspPlannerWindow{
 
 public:
-    myGraspPlannerWindows(std::string& robFile, std::string& eefName, std::string& preshape, std::string& objFile);
+    std::string objectName;
+    std::string robotName;
+    int graspNumber = 0;
+    std::array<Vector3f, 4>  ContactPoints;
 
-    ~myGraspPlannerWindows();
+    myGraspPlannerWindow(std::string& robFile, std::string& eefName, std::string& preshape, std::string& objFile);
+
+    ~myGraspPlannerWindow();
+
+     void closeEEF () override;
+
+     void save_to_json(std::string objectName, std::array<Vector3f, 4>  ContactPoints);
 
 };
 
